@@ -183,9 +183,9 @@ async def domains_list(
 
         return result
 
-    except zeep.exceptions.Fault as er:
-        logger.info(er)
-        return {'message': 'Нет данных для отображения'}
+    # except zeep.exceptions.Fault as er:
+    #     logger.info(er)
+    #     return {'message': 'Нет данных для отображения'}
 
     except Exception as er:
         logger.info(er)
@@ -215,9 +215,6 @@ async def domains_status(
         tasks = []
 
         for idx, chunk in enumerate(domain_chunks, start=1):
-            logger.info(f"Запуск получения статуса доменов. Чанк {idx} из {len(domain_chunks)}")
-            logger.info(chunk)
-
             params = {
                 'partnerid': settings.partner_id,
                 'signkey': settings.sign_key,
