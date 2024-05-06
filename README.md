@@ -1,7 +1,7 @@
 # REST API для управления sedo.
 
 ## Описание
-  - Апи для управления доменами из sedo.com.
+  - REST API для управления доменами из sedo.com.
 
 ## Стек
   - FastAPI, zeep.
@@ -18,4 +18,4 @@
     - python main.py
 
 ## Дополнительно:
-- http://127.0.0.1:8000/api/v1/auth/openapi/ - Swagger sedo_api
+- http://127.0.0.1:8000/api/v1/docs/ - Swagger sedo_api
