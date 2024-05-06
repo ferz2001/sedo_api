@@ -183,9 +183,9 @@ async def domains_list(
 
         return result
 
-    # except zeep.exceptions.Fault as er:
-    #     logger.info(er)
-    #     return {'message': 'Нет данных для отображения'}
+    except zeep.exceptions.Fault as er:
+        logger.info(er)
+        return {'message': 'Нет данных для отображения'}
 
     except Exception as er:
         logger.info(er)
